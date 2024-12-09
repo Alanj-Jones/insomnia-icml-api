@@ -3774,6 +3774,25 @@
       "isPrivate": false,
       "metaSortKey": 1733500541301,
       "_type": "environment"
+    },
+    {
+      "_id": "env_06d53a7a076147a7a7a844e418fea21c",
+      "parentId": "__BASE_ENVIRONMENT_ID__",
+      "modified": "1637671845661",
+      "created": 1733772256022,
+      "name": "Local",
+      "data": {
+        "base_path": "localhost:3333"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "base_path"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1733772256022,
+      "_type": "environment"
     }
   ]
 }
