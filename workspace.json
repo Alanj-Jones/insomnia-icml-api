@@ -817,7 +817,7 @@
       "parentId": "fld_7089cf32e6bc4673868d340b1ef1a731",
       "modified": "1637671845661",
       "created": 1720456001416,
-      "url": "{{ _.base_path }}/api/v1/companies?page=1&limit=25&filters[6][column]=status&filters[6][value]=INACTIVE",
+      "url": "{{ _.base_path }}/api/v1/companies?page=1&limit=25&filters[4][column]=typeIds&filters[4][value]=2",
       "name": "Get Paged Companies",
       "description": "",
       "method": "GET",
@@ -3727,6 +3727,376 @@
       ],
       "authentication": {},
       "metaSortKey": -1733241692836.75,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_8dfeb680d71243378500c3b1eb0cbf13",
+      "parentId": "fld_215c9c10e32e4290b825c5cbf3efad5b",
+      "modified": "1637671845661",
+      "created": 1733778625970,
+      "url": "{{ _.base_path }}/api/v1/body-of-knowledge",
+      "name": "Create BOK",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"body\": \"Bok test\",\n\t\"description\": \"Este es un BOK creado por Alan :)\",\n\t\"examTypes\": [1,2]\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/9.3.3"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733778628764,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_215c9c10e32e4290b825c5cbf3efad5b",
+      "parentId": "__WORKSPACE_ID__",
+      "modified": "1637671845661",
+      "created": 1733778617256,
+      "name": "Body of Knowledge",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1733778617256,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_984de60b5dfb41a99881f221d16ffa6a",
+      "parentId": "fld_215c9c10e32e4290b825c5cbf3efad5b",
+      "modified": "1637671845661",
+      "created": 1733778863970,
+      "url": "{{ _.base_path }}/api/v1/body-of-knowledge?page=1&limit=5&filters[0][column]=examTypes&filters[0][value]=11,1",
+      "name": "List BOK",
+      "description": "",
+      "method": "GET",
+      "body": {
+        "mimeType": "application/json",
+        "text": "// Filters: \n&filters[0][column]=examTypes&filters[0][value]=1,2"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/9.3.3"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733778628864,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_cc2a34a176c843a69f79346a3a43a2c3",
+      "parentId": "fld_215c9c10e32e4290b825c5cbf3efad5b",
+      "modified": "1637671845661",
+      "created": 1733780756439,
+      "url": "{{ _.base_path }}/api/v1/body-of-knowledge/24",
+      "name": "Get BOK by id",
+      "description": "",
+      "method": "GET",
+      "body": {
+        "mimeType": "application/json",
+        "text": "// Filters: \n&filters[0][column]=examTypes&filters[0][value]=1,2"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/9.3.3"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733778628964,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_a8f4fcf17dec4288b8b0299188aaabbe",
+      "parentId": "fld_215c9c10e32e4290b825c5cbf3efad5b",
+      "modified": "1637671845661",
+      "created": 1733780837060,
+      "url": "{{ _.base_path }}/api/v1/body-of-knowledge/1",
+      "name": "Update BOK",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"body\": \"Bok test\",\n\t\"description\": \"Este es un BOK creado por Alan :)\",\n\t\"examTypes\": [1,2]\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/9.3.3"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733510628141.5,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_1c9ad7460bb14cd2b473c0b23b5a647a",
+      "parentId": "fld_215c9c10e32e4290b825c5cbf3efad5b",
+      "modified": "1637671845661",
+      "created": 1733843122868,
+      "url": "{{ _.base_path }}/api/v1/body-of-knowledge/19",
+      "name": "Delete BOK by id",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/9.3.3"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733510628041.5,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_d84a1345a56f4b99867ab8cb5570cb68",
+      "parentId": "fld_8d7600e502d34c1aaa140937968a2a5f",
+      "modified": "1637671845661",
+      "created": 1733841399985,
+      "url": "{{ _.base_path }}/api/v1/domain-of-knowledge",
+      "name": "Create DOK",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"title\": \"A\",\n\t\"author\": \"B\",\n\t\"year\": \"2020\",\n\t\"publisher\": \"C\",\n\t\"publishedCountryId\": 1,\n\t\"publishedState\": \"Arkansas\",\n\t\"publishedCity\": \"LV\",\n\t\"examTypes\": [\n\t\t1,\n\t\t2\n\t]\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/9.3.3"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733778628764,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_8d7600e502d34c1aaa140937968a2a5f",
+      "parentId": "__WORKSPACE_ID__",
+      "modified": "1637671845661",
+      "created": 1733841399962,
+      "name": "Domain of Knowledge",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1733510620920.5,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_05a9952fb9c243b5957f72353ed9dc44",
+      "parentId": "fld_8d7600e502d34c1aaa140937968a2a5f",
+      "modified": "1637671845661",
+      "created": 1733841399993,
+      "url": "{{ _.base_path }}/api/v1/domain-of-knowledge?page=1&limit=5&filters[0][column]=examTypes&filters[0][value]=4",
+      "name": "List DOK",
+      "description": "",
+      "method": "GET",
+      "body": {
+        "mimeType": "application/json",
+        "text": "// Filters: \n&filters[0][column]=examTypes&filters[0][value]=1,2"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/9.3.3"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733778628864,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_f4e2b5d51605446f8a347a8cce180ce5",
+      "parentId": "fld_8d7600e502d34c1aaa140937968a2a5f",
+      "modified": "1637671845661",
+      "created": 1733841399994,
+      "url": "{{ _.base_path }}/api/v1/domain-of-knowledge/23",
+      "name": "Get DOK by ID",
+      "description": "",
+      "method": "GET",
+      "body": {
+        "mimeType": "application/json",
+        "text": "// Filters: \n&filters[0][column]=examTypes&filters[0][value]=1,2"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/9.3.3"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733778628964,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_dff41157b49b427d9960002dd43f19b7",
+      "parentId": "fld_8d7600e502d34c1aaa140937968a2a5f",
+      "modified": "1637671845661",
+      "created": 1733841399995,
+      "url": "{{ _.base_path }}/api/v1/domain-of-knowledge/23",
+      "name": "Update DOK",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"title\": \"upd\",\n\t\"author\": \"upd\",\n\t\"year\": \"2020upd\",\n\t\"publisher\": \"Cupdupd\",\n\t\"publishedCountryId\": 2,\n\t\"publishedState\": \"upd\",\n\t\"publishedCity\": \"upd\",\n\t\"examTypes\": [\n\t\t11,\n\t\t12\n\t]\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/9.3.3"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733510628141.5,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_d8e257917dc94535b9667ad052b4ba92",
+      "parentId": "fld_8d7600e502d34c1aaa140937968a2a5f",
+      "modified": "1637671845661",
+      "created": 1733842931679,
+      "url": "{{ _.base_path }}/api/v1/domain-of-knowledge/23",
+      "name": "Delete DOK by ID",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/9.3.3"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733510628041.5,
       "isPrivate": false,
       "pathParameters": [],
       "settingStoreCookies": true,
