@@ -136,7 +136,7 @@
       "method": "POST",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n\t\"startTime\": \"2024-12-03T09:00:00Z\",\n\t\"endTime\": \"2024-12-03T12:00:00Z\",\n\t\"isPrivate\": true,\n\t\"adminNotes\": \"session 3.\",\n\t\"countryId\": 1,\n\t\"state\": \"California\",\n\t\"city\": \"Los Angeles\",\n\t\"zipCode\": \"94103\",\n\t\"address\": \"123 Market Street- Suite 400\",\n\t\"proctorId\": null,\n\t\"trainingCompanyId\": 2,\n\t\"clients\": [\n\t\t1,\n\t\t2\n\t],\n\t\"sponsorId\": 2,\n\t\"instructors\": [],\n\t\"status\": \"Confirmed\",\n\t\"isHidden\": true,\n\t\"examTypes\": [4,5,6]\n}"
+        "text": "{\n\t\"startTime\": \"2024-12-03T09:00:00Z\",\n\t\"endTime\": \"2024-12-03T12:00:00Z\",\n\t\"isPrivate\": true,\n\t\"adminNotes\": \"session 3.\",\n\t\"countryId\": 1,\n\t\"state\": \"California\",\n\t\"city\": \"Los Angeles\",\n\t\"zipCode\": \"94103\",\n\t\"address\": \"123 Market Street- Suite 400\",\n\t\"trainingCompanyId\": 2,\n\t\"clients\": [\n\t\t1,\n\t\t2\n\t],\n\t\"sponsorId\": 2,\n\t\"instructors\": [1],\n\t\"proctors\": [\n\t],\n\t\"status\": \"Confirmed\",\n\t\"isHidden\": true,\n\t\"examTypes\": [\n\t\t4,\n\t\t5,\n\t\t6\n\t],\n\t\"location\": \"La casa de Alan\",\n\t\"isInvoiced\": false,\n\t\"invoiceShippingInstructions\": \"A la derecha y despues a la izquierda y despues de nuevo a la izquierda\",\n\t\"isPackageShipped\": false\n}"
       },
       "parameters": [],
       "headers": [
@@ -178,13 +178,13 @@
       "parentId": "fld_5d0ce1e3381242888677a856ae237e69",
       "modified": "1637671845661",
       "created": 1720027768230,
-      "url": "{{ _.base_path }}/api/v1/exam-sessions/7",
+      "url": "{{ _.base_path }}/api/v1/exam-sessions/10",
       "name": "Update Exam Session",
       "description": "",
       "method": "PUT",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n\t\"startTime\": \"2024-07-03T09:00:00Z\",\n\t\"endTime\": \"2024-07-03T12:00:00Z\",\n\t\"isPrivate\": true,\n\t\"adminNotes\": \"Meeting to discuss project updates.\",\n\t\"countryId\": 1,\n\t\"state\": \"California\",\n\t\"city\": \"Los Angeles\",\n\t\"zipCode\": \"94103\",\n\t\"address\": \"123 Market Street- Suite 400\",\n\t\"proctorId\": 1,\n\t\"trainingCompanyId\": 2,\n\t\"clients\": [\n\t\t1,\n\t\t2\n\t],\n\t\"sponsorId\": 2,\n\t\"instructors\": [\n\t\t1\n\t],\n\t\"status\": \"Confirmed\",\n\t\"isHidden\": false,\n\t\"examTypes\": [\n\t\t1,\n\t\t2,\n\t\t3,\n\t\t4\n\t]\n}"
+        "text": "{\n\t\"startTime\": \"2024-07-03T09:00:00Z\",\n\t\"endTime\": \"2024-07-03T12:00:00Z\",\n\t\"isPrivate\": true,\n\t\"adminNotes\": \"Meeting to discuss project updates.\",\n\t\"countryId\": 1,\n\t\"state\": \"California\",\n\t\"city\": \"Los Angeles\",\n\t\"zipCode\": \"94103\",\n\t\"address\": \"123 Market Street- Suite 400\",\n\t\"trainingCompanyId\": 2,\n\t\"clients\": [\n\t\t1,\n\t\t2\n\t],\n\t\"sponsorId\": 2,\n\t\"instructors\": [\n\t],\n\t\"status\": \"Confirmed\",\n\t\"isHidden\": false,\n\t\"examTypes\": [\n\t\t4\n\t],\n\t\"location\": \"La cassa de Alan\",\n\t\"proctors\": [\n\t\t3\n\t],\n\t\"isInvoiced\": false,\n\t\"invoiceShippingInstructions\": \"A la derecha y despues a la izquierda y despues de nuevo a la izquierda\",\n\t\"isPackageShipped\": false\n}"
       },
       "parameters": [],
       "headers": [
@@ -214,7 +214,7 @@
       "parentId": "fld_5d0ce1e3381242888677a856ae237e69",
       "modified": "1637671845661",
       "created": 1720027777489,
-      "url": "{{ _.base_path }}/api/v1/exam-sessions/7",
+      "url": "{{ _.base_path }}/api/v1/exam-sessions/2",
       "name": "Get Exam Session",
       "description": "",
       "method": "GET",
@@ -250,13 +250,13 @@
       "parentId": "fld_5d0ce1e3381242888677a856ae237e69",
       "modified": "1637671845661",
       "created": 1724700398805,
-      "url": "{{ _.base_path }}/api/v1/exam-sessions?page=1&limit=20",
+      "url": "{{ _.base_path }}/api/v1/exam-sessions?page=1&limit=20&filters[7][column]=isPackageShipped&filters[7][value]=true",
       "name": "Get Exam Sessions Page",
       "description": "",
       "method": "GET",
       "body": {
         "mimeType": "application/json",
-        "text": "&filters[0][column]=countryId&filters[0][value]=1\n&filters[1][column]=state&filters[1][value]=california\n&filters[2][column]=city&filters[2][value]=san%20francisco\n&filters[3][column]=date&filters[3][value]=2024-07-07\n&filters[4][column]=active&filters[4][value]=true\nhttp://localhost:3333/api/v1/exam-sessions?page=1&limit=20"
+        "text": "&filters[0][column]=countryId&filters[0][value]=1\n&filters[1][column]=state&filters[1][value]=california\n&filters[2][column]=city&filters[2][value]=san%20francisco\n&filters[3][column]=date&filters[3][value]=2024-07-07\n&filters[4][column]=active&filters[4][value]=true\n&filters[5][column]=location&filters[5][value]=casa\n&filters[6][column]=isInvoiced&filters[6][value]=true\n&filters[7][column]=isPackageShipped&filters[7][value]=true\nhttp://localhost:3333/api/v1/exam-sessions?page=1&limit=20"
       },
       "parameters": [],
       "headers": [
@@ -520,13 +520,13 @@
       "parentId": "fld_79feef559ed34846a3735cc5580c6c73",
       "modified": "1637671845661",
       "created": 1722012206003,
-      "url": "{{ _.base_path }}/api/v1/people/1301",
+      "url": "{{ _.base_path }}/api/v1/people/12",
       "name": "Patch Person",
       "description": "",
       "method": "PATCH",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n\t\"firstName\": \"John\",\n\t\"middleName\": null,\n\t\"lastName\": \"alan\",\n\t\"primaryEmail\": \"s1aass.1d1s1oe@example.com\",\n\t\"secondaryEmail\": \"johnss2asas1as@alt.com\",\n\t\"primaryPhone\": \"+1234567890\",\n\t\"addressLine1\": \"123 Main Street\",\n\t\"city\": \"NeswYork\",\n\t\"state\": \"NY\",\n\t\"zipCode\": \"1000\",\n\t\"countryId\": 1,\n\t\"branchId\": 12,\n\t\"nameOnCertificate\": \"john\",\n\t\"profileImage\": null,\n\t\"files\": [\n\t\t{\n\t\t\t\"url\": \"asd.com\",\n\t\t\t\"category\": \"cat2\"\n\t\t},\n\t\t{\n\t\t\t\"url\": \"asd.com\",\n\t\t\t\"category\": \"cat2\"\n\t\t}\n\t],\n\t\"volunteer\": {\n\t\t\"examTypes\": [\n\t\t\t4\n\t\t]\n\t}\n}"
+        "text": "{\n\t\"firstName\": \"John\",\n\t\"middleName\": null,\n\t\"lastName\": \"alan\",\n\t\"primaryEmail\": \"s1aass.1d1s1oe@example.com\",\n\t\"secondaryEmail\": \"johnss2asas1as@alt.com\",\n\t\"primaryPhone\": \"+1234567890\",\n\t\"addressLine1\": \"123 Main Street\",\n\t\"city\": \"NeswYork\",\n\t\"state\": \"NY\",\n\t\"zipCode\": \"1000\",\n\t\"countryId\": 1,\n\t\"branchId\": 12,\n\t\"nameOnCertificate\": \"john\",\n\t\"profileImage\": null,\n\t\"files\": [\n\t\t{\n\t\t\t\"url\": \"asd.com\",\n\t\t\t\"category\": \"cat2\"\n\t\t},\n\t\t{\n\t\t\t\"url\": \"asd.com\",\n\t\t\t\"category\": \"cat2\"\n\t\t}\n\t],\n\t\"volunteer\": {\n\t\t\"examTypes\": [\n\t\t\t4\n\t\t]\n\t},\n\t\"instructor\": {\n\t\t\"trainingCompanyId\": null,\n\t\t\"notes\": \"Yes, I'm an instructor!\"\n\t}\n}"
       },
       "parameters": [],
       "headers": [
@@ -556,7 +556,7 @@
       "parentId": "fld_79feef559ed34846a3735cc5580c6c73",
       "modified": "1637671845661",
       "created": 1725373366519,
-      "url": "{{ _.base_path }}/api/v1/people/1",
+      "url": "{{ _.base_path }}/api/v1/people/1301",
       "name": "Get Person by Id",
       "description": "",
       "method": "GET",
@@ -1492,7 +1492,7 @@
       "method": "POST",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n\t\"personId\": 2,\n\t\"hasConfidentialAgreement\": false,\n\t\"paymentNotes\": \"Ad honorem\",\n\t\"wireDetails\": \"Nao tem\",\n\t\"jobTitle\": \"Proctor trainee\"\n}"
+        "text": "{\n\t\"personId\": 3,\n\t\"hasConfidentialAgreement\": false,\n\t\"paymentNotes\": \"Ad honorem\",\n\t\"wireDetails\": \"Nao tem\"\n}"
       },
       "parameters": [],
       "headers": [
@@ -3048,11 +3048,20 @@
       "headers": [
         {
           "name": "Content-Type",
-          "value": "application/json"
+          "value": "application/json",
+          "id": "pair_93dc302b943a4eeab15ffb567faef197"
         },
         {
           "name": "User-Agent",
-          "value": "insomnia/9.3.3"
+          "value": "insomnia/9.3.3",
+          "id": "pair_db4fdbb7b52346ddbe27856f8fb8a1e9"
+        },
+        {
+          "id": "pair_0b6f0e95099346d6971243e126f1df0a",
+          "name": "Authorization",
+          "value": "Bearer {{token}}",
+          "description": "",
+          "disabled": false
         }
       ],
       "authentication": {},
@@ -3072,7 +3081,7 @@
       "parentId": "fld_0b329b4470e748228d8f051074b901cb",
       "modified": "1637671845661",
       "created": 1732805649528,
-      "url": "{{ _.base_path }}/api/v1/tqe/1",
+      "url": "{{ _.base_path }}/api/v1/tqe/3",
       "name": "Get TQE Item",
       "description": "",
       "method": "GET",
@@ -3123,7 +3132,7 @@
       "method": "PUT",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n  \"examTypeId\": 3,\n  \"assignedTo\": 4,\n  \"processStep\": \"REVIEW_QUESTION\",\n  \"icmlQNumber\": \"ICML-12345\",\n  \"approvedDate\": null,\n  \"approvedBy\": null,\n  \"finalizedAt\": \"2024-11-25T15:45:00Z\",\n  \"exportedAt\": \"2024-11-26T08:20:00Z\",\n  \"copyEditAssignedAt\": \"2024-11-20T09:00:00Z\",\n  \"copyEditFinalizedAt\": \"2024-11-22T14:00:00Z\",\n  \"adminNotes\": \"Ensure all formatting guidelines are followed.\"\n}\n"
+        "text": "{\n\t\"examTypeId\": 3,\n\t\"assignedTo\": 4,\n\t\"processStep\": \"REVIEW_QUESTION\",\n\t\"icmlQNumber\": \"ICML-12345\",\n\t\"approvedDate\": null,\n\t\"approvedBy\": null,\n\t\"finalizedAt\": \"2024-11-25T15:45:00Z\",\n\t\"exportedAt\": \"2024-11-26T08:20:00Z\",\n\t\"copyEditAssignedAt\": \"2024-11-20T09:00:00Z\",\n\t\"copyEditFinalizedAt\": \"2024-11-22T14:00:00Z\",\n\t\"adminNotes\": \"Ensure all formatting guidelines are followed.\",\n\t\"bokId\": 1,\n\t\"dokId\": 1,\n\t\"pages\": \"11\"\n}"
       },
       "parameters": [],
       "headers": [
@@ -3187,55 +3196,6 @@
       "_type": "request"
     },
     {
-      "_id": "req_6434cc60b1bb45719c49e32621efcd97",
-      "parentId": "fld_8105c2efaa2d4277bfda98995971a459",
-      "modified": "1637671845661",
-      "created": 1733151153870,
-      "url": "{{ _.base_path }}/api/v1/users/tqe-items?page=1&limit=2",
-      "name": "List Tqe Items Assigned",
-      "description": "",
-      "method": "GET",
-      "body": {},
-      "parameters": [],
-      "headers": [
-        {
-          "name": "User-Agent",
-          "value": "insomnia/9.3.2",
-          "id": "pair_9306c658e575482b85aec298f5ad7e47"
-        },
-        {
-          "id": "pair_8b42399e87d24edc887240fd4ac8ffec",
-          "name": "Authorization",
-          "value": "Bearer {{token}}",
-          "description": "",
-          "disabled": false
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1733238888890,
-      "isPrivate": false,
-      "pathParameters": [],
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global",
-      "_type": "request"
-    },
-    {
-      "_id": "fld_8105c2efaa2d4277bfda98995971a459",
-      "parentId": "__WORKSPACE_ID__",
-      "modified": "1637671845661",
-      "created": 1733238885566,
-      "name": "Users",
-      "description": "",
-      "environment": {},
-      "environmentPropertyOrder": null,
-      "metaSortKey": -1733238885566,
-      "_type": "request_group"
-    },
-    {
       "_id": "req_3280e8daf97b4cb197bf127805e5f391",
       "parentId": "fld_8105c2efaa2d4277bfda98995971a459",
       "modified": "1637671845661",
@@ -3271,6 +3231,18 @@
       "settingRebuildPath": true,
       "settingFollowRedirects": "global",
       "_type": "request"
+    },
+    {
+      "_id": "fld_8105c2efaa2d4277bfda98995971a459",
+      "parentId": "__WORKSPACE_ID__",
+      "modified": "1637671845661",
+      "created": 1733238885566,
+      "name": "Users",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1733238885566,
+      "_type": "request_group"
     },
     {
       "_id": "req_bf9e89394efb40209889aac74032b092",
@@ -3320,7 +3292,7 @@
       "method": "POST",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n\t\"email\": \"alan3@gmail.com\",\n\t\"username\": \"alan3\",\n\t\"password\": \"Password1!\",\n\t\"role\": \"ADMIN\",\n\t\"personId\": 1\n}"
+        "text": "{\n\t\"email\": \"alana@gmail.com\",\n\t\"username\": \"alana\",\n\t\"password\": \"Password1!\",\n\t\"role\": \"SUPER_ADMIN\",\n\t\"personId\": 1\n}"
       },
       "parameters": [],
       "headers": [
@@ -3359,7 +3331,7 @@
       "parentId": "fld_8105c2efaa2d4277bfda98995971a459",
       "modified": "1637671845661",
       "created": 1733239104043,
-      "url": "{{ _.base_path }}/api/v1/users/4",
+      "url": "{{ _.base_path }}/api/v1/users/202",
       "name": "Update User",
       "description": "",
       "method": "PUT",
@@ -3437,7 +3409,7 @@
       "method": "POST",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n\t\"identifier\": \"alan@gmail.com\",\n\t\"password\": \"Password1!\"\n}"
+        "text": "{\n\t\"identifier\": \"alan\",\n\t\"password\": \"Password1!\"\n}"
       },
       "parameters": [],
       "headers": [
@@ -3929,7 +3901,7 @@
       "method": "POST",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n  \"statement\": \"Bla bla bla bla bla ble!\",\n  \"stem\": \"Bla, bla ble blu!?!?\",\n  \"bokId\": 2,\n  \"dokId\": 1,\n  \"pages\": \"1\",\n  \"correctAnswer\": \"A\",\n  \"answerA\": \"Bla\",\n  \"answerB\": \"Ble\",\n  \"answerC\": \"Bli\",\n  \"answerD\": \"Blo\",\n  \"notes\": \"Capitalized first letters\"\n}\n"
+        "text": "{\n  \"statement\": \"Bla bla bla bla bla ble!\",\n  \"stem\": \"Bla, bla ble blu!?!?\",\n  \"correctAnswer\": \"A\",\n  \"answerA\": \"Bla\",\n  \"answerB\": \"Ble\",\n  \"answerC\": \"Bli\",\n  \"answerD\": \"Blo\",\n  \"notes\": \"Capitalized first letters\"\n}\n"
       },
       "parameters": [],
       "headers": [
@@ -4017,13 +3989,13 @@
       "parentId": "fld_a9bc9bd3dd3742de90ece05a3f6d059d",
       "modified": "1637671845661",
       "created": 1732828210958,
-      "url": "{{ _.base_path }}/api/v1/tqe/4/versions/9",
+      "url": "{{ _.base_path }}/api/v1/tqe/1/versions/1",
       "name": "Update TQE Item Version",
       "description": "",
       "method": "PUT",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n  \"statement\": \"Bla bla bla bla bla ble!\",\n  \"stem\": \"Bla, bla ble blu!?!?\",\n  \"bokId\": 2,\n  \"dokId\": 1,\n  \"pages\": \"1\",\n  \"correctAnswer\": \"A\",\n  \"answerA\": \"Bla\",\n  \"answerB\": \"Ble\",\n  \"answerC\": \"Bli\",\n  \"answerD\": \"Blo\",\n  \"notes\": \"Updated Capitalized first letters\"\n}\n"
+        "text": "{\n  \"statement\": \"Bla bla bla bla bla ble!\",\n  \"stem\": \"Bla, bla ble blu!?!?\",\n  \"correctAnswer\": \"A\",\n  \"answerA\": \"Bla\",\n  \"answerB\": \"Ble\",\n  \"answerC\": \"Bli\",\n  \"answerD\": \"Blo\",\n  \"notes\": \"Updated Capitalized first letters\"\n}\n"
       },
       "parameters": [],
       "headers": [
@@ -4144,7 +4116,7 @@
       "parentId": "fld_a9bc9bd3dd3742de90ece05a3f6d059d",
       "modified": "1637671845661",
       "created": 1734105744306,
-      "url": "{{ _.base_path }}/api/v1/tqe/1/versions/3/approve",
+      "url": "{{ _.base_path }}/api/v1/tqe/3/versions/6/approve",
       "name": "APPROVE TQE Item Version",
       "description": "",
       "method": "PUT",
@@ -4529,7 +4501,7 @@
       "created": 1733500541298,
       "name": "UAT",
       "data": {
-        "base_path": "http://ec2-3-230-2-171.compute-1.amazonaws.com"
+        "base_path": "http://ec2-52-91-218-198.compute-1.amazonaws.com"
       },
       "dataPropertyOrder": {
         "&": [
@@ -4549,7 +4521,7 @@
       "name": "Local",
       "data": {
         "base_path": "localhost:3333",
-        "token": "oat_MjI.MDlrU1U5SVBLUUN2UEFHSnAzT0JrN2J6S25kUzlQNEp0Q21Cb0t0dTEwNzA5NzUxNDI"
+        "token": "oat_Mg.MkNOVlhRYmpGdkhVTUFYRGtCQzhQNVJrNXp6OFpRQ0FHU2ZQQ2swXzM2OTc5NDc3NTA"
       },
       "dataPropertyOrder": {
         "&": [
